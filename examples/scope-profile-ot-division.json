@@ -1,0 +1,14 @@
+{
+  "profile_name": "Industrial and energy-services division",
+  "description": "The industrial estate: NERC CIP obligations for the services division, ISA/IEC 62443 as the engineering reference, and the enterprise baselines that apply across the boundary.",
+  "assessment_date": "2026-09-30",
+  "in_scope_frameworks": ["N53", "CSF", "IEC62443", "CIP"],
+  "status_file": "examples/implementation-status.csv",
+  "excluded_controls": {
+    "PR-01": "no personal data processed in the industrial boundary",
+    "PR-02": "no personal data processed in the industrial boundary",
+    "PR-03": "no personal data processed in the industrial boundary",
+    "SA-03": "no regulated product software in this boundary; assessed under the product security profile"
+  },
+  "notes": "CIP obligations are prescriptive. Where this report shows a gap against a CIP requirement, the response is a mitigation plan under the standard's own terms, not an enterprise risk acceptance - see docs/conflict-reconciliation.md."
+}

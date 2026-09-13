@@ -1,0 +1,13 @@
+{
+  "profile_name": "Enterprise core obligations",
+  "description": "The frameworks the reference organization is obligated to today, excluding the FedRAMP pursuit and the industrial division's regulatory scope. This is the profile the audit committee sees quarterly.",
+  "assessment_date": "2026-09-30",
+  "in_scope_frameworks": ["N53", "CSF", "SOC2", "HIPAA", "ISO", "SOX", "GDPR"],
+  "status_file": "examples/implementation-status.csv",
+  "excluded_controls": {
+    "OT-01": "no industrial systems in this assessment boundary; assessed under the OT division profile",
+    "OT-02": "no industrial systems in this assessment boundary; assessed under the OT division profile",
+    "OT-03": "no industrial systems in this assessment boundary; assessed under the OT division profile"
+  },
+  "notes": "ISO 27001:2022 is used as a structural reference and gap-assessed only; no certification is being pursued. SOX identifiers are internal ITGC control numbers, not an external catalogue."
+}

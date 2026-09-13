@@ -1,0 +1,14 @@
+{
+  "profile_name": "SaaS platform FedRAMP Moderate pursuit",
+  "description": "Adds the FedRAMP Moderate baseline and CMMC Level 2 to the core profile, scoped to the SaaS platform boundary. Used to size the authorization effort before committing to a date.",
+  "assessment_date": "2026-09-30",
+  "in_scope_frameworks": ["N53", "CSF", "SOC2", "FEDRAMP", "CMMC", "ISO"],
+  "status_file": "examples/implementation-status.csv",
+  "excluded_controls": {
+    "OT-01": "outside the SaaS authorization boundary",
+    "OT-02": "outside the SaaS authorization boundary",
+    "OT-03": "outside the SaaS authorization boundary",
+    "PE-02": "no removable media permitted within the authorization boundary; enforced by platform policy"
+  },
+  "notes": "Enterprise status data is reused here deliberately. Control inheritance from the underlying cloud service provider is NOT modelled; inherited controls would materially change this picture and are the first thing a real authorization effort would separate out."
+}
