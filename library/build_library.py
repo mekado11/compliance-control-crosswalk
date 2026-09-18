@@ -39,6 +39,7 @@ FRAMEWORKS = [
     ("CIP", "NERC CIP"),
     ("SOX", "SOX ITGC (PCAOB AS 2201 framing)"),
     ("GDPR", "GDPR (Regulation (EU) 2016/679)"),
+    ("FDA", "FDA medical device cybersecurity (FD&C Act §524B; Feb. 2026 guidance)"),
 ]
 FW_KEYS = [k for k, _ in FRAMEWORKS]
 FW_NAMES = dict(FRAMEWORKS)
@@ -1097,6 +1098,33 @@ ctl("NW-02", "Network", "Egress control and data movement monitoring",
      "HIPAA": "164.312(e)(1)|P", "FEDRAMP": "SC-7(5)|F (M)", "CMMC": "SC.L2-3.13.1|P; AC.L2-3.1.3|F",
      "ISO": "A.8.12|F; A.8.20|P", "IEC62443": "62443-3-3 SR 5.2|P", "CIP": "CIP-005-6 R1.3|P",
      "SOX": "-", "GDPR": "Art.32(1)(b)|P; Art.44|S"}),
+
+
+# ---- FDA medical-device cybersecurity -------------------------------------------------
+# Representative mappings to statutory cyber-device obligations in FD&C Act §524B and
+# FDA's February 2026 final premarket cybersecurity guidance. Guidance-section mappings
+# are recommendations; §524B(b) mappings identify statutory submission requirements.
+FDA_MAPPINGS = {
+    "GV-04": "FD&C Act 524B(b)|P",
+    "RM-01": "FDA Guidance IV.B Cybersecurity Risk|P; FDA Guidance V SPDF|P",
+    "AM-04": "FD&C Act 524B(b)(3) SBOM|F; FDA Guidance VII Cyber Devices|F",
+    "AC-02": "FDA Guidance V.A Security Architecture|S",
+    "AC-04": "FDA Guidance V.A Security Architecture|S",
+    "VM-01": "FD&C Act 524B(b)(1) vulnerability monitoring|P; FDA Guidance VI Cybersecurity Transparency|S",
+    "VM-02": "FD&C Act 524B(b)(2) updates and patches|F; FDA Guidance V SPDF|P",
+    "IR-01": "FD&C Act 524B(b)(1) vulnerabilities and exploits|P",
+    "IR-02": "FD&C Act 524B(b)(1) coordinated vulnerability disclosure|P",
+    "SD-01": "FD&C Act 524B(b)(2) cybersecure design and development|P; FDA Guidance V SPDF|F",
+    "SD-02": "FDA Guidance V.A Threat Modeling|F",
+    "SD-03": "FDA Guidance V.A Cybersecurity Testing|F",
+    "SC-01": "FDA Guidance V.A Security Architecture|P",
+    "SC-02": "FDA Guidance V.A Security Architecture|P",
+    "LG-01": "FDA Guidance V.A Event Detection and Logging|P",
+    "TP-01": "FDA Guidance V SPDF|S",
+}
+
+for _control in C:
+    _control["mappings"]["FDA"] = FDA_MAPPINGS.get(_control["control_id"], "-")
 
 
 # --------------------------------------------------------------------------------------
