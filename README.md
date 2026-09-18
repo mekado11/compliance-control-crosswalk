@@ -1,6 +1,6 @@
 # Compliance Control Crosswalk
 
-A single enterprise control library crosswalked across eleven security and privacy frameworks, with
+A single enterprise control library crosswalked across twelve security, privacy and regulatory frameworks, with
 per-control evidence requirements, test procedures and automation ratings, plus a gap-report
 generator that runs against any declared set of in-scope frameworks.
 
@@ -25,11 +25,11 @@ architecture or assessment results from any organization.
 ## Scope and boundaries
 
 **In scope.** A representative control library spanning nineteen families; crosswalk mappings to
-eleven frameworks with explicit strength ratings; a working gap-report generator with three example
+twelve frameworks with explicit strength ratings; a working gap-report generator with three example
 scope profiles; methodology documentation covering mapping, conflict reconciliation and evidence
 reuse; a test suite covering data integrity and scoring behaviour.
 
-**Out of scope.** This is not a compliance product and not a substitute for a GRC platform. The
+**FDA boundary.** The FDA column is limited to medical-device cybersecurity: FD&C Act §524B and FDA's February 2026 final premarket cybersecurity guidance. Statutory §524B requirements are distinguished from nonbinding guidance recommendations in the mapping identifiers. It is not a general FDA/QMSR crosswalk.\n\n**Out of scope.** This is not a compliance product and not a substitute for a GRC platform. The
 mappings are editorial judgements, not authoritative interpretations, and no framework body has
 reviewed them. Control inheritance from cloud service providers is not modelled, which materially
 understates the effort profile of any authorization pursuit. Assessment objectives, parameter
@@ -56,6 +56,7 @@ outside this repository.
 | NERC CIP | current standard versions as cited per requirement | Prescriptive requirements; gaps route to the standard's own deviation mechanism, never to enterprise risk acceptance |
 | SOX ITGC | PCAOB AS 2201 framing | Internal key control identifiers; there is no external SOX control catalogue and the reports say so |
 | GDPR | Regulation (EU) 2016/679 | Article-level obligations, predominantly Art. 5, 30, 32, 33–35 and the data subject rights articles |
+| FDA medical device cybersecurity | FD&C Act §524B; February 2026 final premarket cybersecurity guidance | Representative cyber-device obligations and FDA recommendations for secure product development, threat modeling, security architecture, testing, vulnerability management, coordinated disclosure, patches and SBOMs |
 | CycloneDX / SPDX | 1.7 (ECMA-424 2nd Ed.) / 3.0.1 | SBOM format requirements referenced by control AM-04 |
 
 ## Repository structure
